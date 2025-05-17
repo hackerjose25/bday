@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday MOON</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle, #ffe0f0, #ff8db2);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    #drag-container {
+      width: 100vw;
+      height: 100vh;
+      perspective: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #spin-container {
+      width: 120px;
+      height: 170px;
+      position: absolute;
+      animation: spin 60s linear infinite;
+      transform-style: preserve-3d;
+    }
+
+    #spin-container img {
+      position: absolute;
+      width: 120px;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 1s;
+    }
+
+    p {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      font-size: 24px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    #ground {
+      position: absolute;
+      bottom: 0;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="drag-container">
+  <div id="spin-container">
+    <img src="s6.jpg" style="transform: rotateY(0deg) translateZ(240px); transition-delay: 2.5s;" />
+    <img src="s1.jpg" style="transform: rotateY(36deg) translateZ(240px); transition-delay: 2.25s;" />
+    <img src="s10.jpg" style="transform: rotateY(72deg) translateZ(240px); transition-delay: 2s;" />
+    <img src="s2.jpg" style="transform: rotateY(108deg) translateZ(240px); transition-delay: 1.75s;" />
+    <img src="s7.jpg" style="transform: rotateY(144deg) translateZ(240px); transition-delay: 1.5s;" />
+    <img src="s3.jpg" style="transform: rotateY(180deg) translateZ(240px); transition-delay: 1.25s;" />
+    <img src="s9.png" style="transform: rotateY(216deg) translateZ(240px); transition-delay: 1s;" />
+    <img src="s4.jpg" style="transform: rotateY(252deg) translateZ(240px); transition-delay: 0.75s;" />
+    <img src="s8.jpg" style="transform: rotateY(288deg) translateZ(240px); transition-delay: 0.5s;" />
+    <img src="s5.jpg" style="transform: rotateY(324deg) translateZ(240px); transition-delay: 0.25s;" />
+  </div>
+  <p>🎉 Happy Birthday SHARINI 🎉</p>
+  <div id="ground"></div>
+</div>
+
+<audio id="myAudio" autoplay loop playsinline>
+  <source src="birthday-music.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
