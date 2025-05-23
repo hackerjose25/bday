@@ -70,6 +70,10 @@
 <body>
 
 <div id="drag-container">
+  <!-- Add the instruction text above the spin-container -->
+  <div style="position: absolute; top: 40px; width: 100%; font-size: 22px; color: #fff; text-shadow: 2px 2px 4px #000; z-index: 2;">
+    egayadhu click pannu for bgm 🎶🎵
+  </div>
   <div id="spin-container">
     <img src="s6.jpg" style="transform: rotateY(0deg) translateZ(240px); transition-delay: 2.5s;" />
     <img src="s1.jpg" style="transform: rotateY(36deg) translateZ(240px); transition-delay: 2.25s;" />
@@ -83,16 +87,26 @@
     <img src="s5.jpg" style="transform: rotateY(324deg) translateZ(240px); transition-delay: 0.25s;" />
   </div>
   <div style="margin-top: 300px; font-size: 24px; text-shadow: 2px 2px 4px #000;">
-  🎉 Happy Birthday SHARINI 🎉
+    🎉 Happy Birthday SHARINI 🎉<br>
+    Music played by me Keyboard 🎹 laa....
+  </div>
 </div>
 
   <div id="ground"></div>
 </div>
 
-<audio id="myAudio" autoplay loop playsinline>
-  <source src="birthday-music.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
+<audio id="myAudio" autoplay loop>
+  <source src="un vizhigalil keyboard.mp3" type="audio/mpeg" />
 </audio>
 
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('myAudio');
+    audio.play();
+  }, { once: true }); // ensures it only runs once
+</script>
+
+
+</audio>
 </body>
 </html>
